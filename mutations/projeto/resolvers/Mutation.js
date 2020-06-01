@@ -37,11 +37,22 @@ module.exports = {
       return null
     }
 
-    const user = {
-      ...users[i],
-      ...args
+    users[i].name = args.name
+    users[i].email = args.email
+
+    if (args.age) {
+      users[i].age = args.age
     }
 
-    return user
+    return users[i]
+
+    // const user = {
+    //   ...users[i],
+    //   ...args
+    // }
+
+    // users.splice(i, 1, user)
+
+    // return user
   }
 }
